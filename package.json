@@ -1,0 +1,39 @@
+{
+  "name": "@cognis-digital/localmcphub",
+  "version": "0.1.0",
+  "description": "Registry, launcher, and health dashboard for a fleet of local MCP (Model Context Protocol) servers.",
+  "type": "module",
+  "bin": {
+    "localmcphub": "dist/src/cli.js"
+  },
+  "exports": {
+    ".": "./dist/src/index.js"
+  },
+  "files": [
+    "dist/src",
+    "examples",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "test": "node --test \"dist/test/**/*.test.js\""
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "process-manager",
+    "registry",
+    "health",
+    "cli"
+  ],
+  "author": "Cognis Digital",
+  "license": "SEE LICENSE IN COCL 1.0",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0"
+  }
+}

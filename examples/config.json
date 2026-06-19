@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "servers": [
+    {
+      "name": "filesystem",
+      "description": "Reference MCP filesystem server exposing a sandboxed directory.",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./data"],
+      "cwd": ".",
+      "env": {
+        "MCP_LOG_LEVEL": "info"
+      },
+      "healthcheck": {
+        "command": "node",
+        "args": ["-e", "process.exit(0)"],
+        "timeoutMs": 3000
+      }
+    },
+    {
+      "name": "memory",
+      "description": "In-process key/value memory MCP server.",
+      "command": "node",
+      "args": ["./servers/memory-server.js"],
+      "env": {
+        "MEMORY_FILE": "./data/memory.json"
+      }
+    },
+    {
+      "name": "git-readonly",
+      "description": "Read-only git MCP server scoped to a single repo.",
+      "command": "python",
+      "args": ["-m", "mcp_server_git", "--repository", "."],
+      "cwd": "."
+    }
+  ]
+}

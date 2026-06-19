@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Runtime state written by localmcphub
+.localmcphub-state.json
+*.localmcphub-state.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Env
+.env
+.env.*
