@@ -16,6 +16,33 @@ and probes the processes you declare.
 - License: COCL 1.0
 - Maintainer: Cognis Digital
 
+
+<!-- cognis:example:start -->
+## 🔎 Example output
+
+**Sample result format** _(illustrative values — run on your own data for real findings):_
+
+```
+{
+"results": [
+  {
+    "id": "1234567890",
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "phone": "+1-555-1234"
+  },
+  {
+    "id": "2345678901",
+    "name": "Jane Smith",
+    "email": "janesmith@example.com",
+    "phone": "+1-555-5678"
+  }
+]
+}
+```
+
+<!-- cognis:example:end -->
+
 ## Install
 
 ```bash
